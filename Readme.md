@@ -40,6 +40,7 @@
       * [28 Python2和3的区别](#28-python2和3的区别)
       * [29 super init](#29-super-init)
       * [30 range and xrange](#30-range-and-xrange)
+      * [31 进程、线程、协程
    * [操作系统](#操作系统)
       * [1 select,poll和epoll](#1-selectpoll和epoll)
       * [2 调度算法](#2-调度算法)
@@ -763,6 +764,11 @@ What is the difference between range and xrange functions in Python 2.X?
  xrange is a sequence object that evaluates lazily.
 
 http://stackoverflow.com/questions/94935/what-is-the-difference-between-range-and-xrange-functions-in-python-2-x
+
+## 31 进程、线程、进程
+进程：应用程序的启动实例，进程拥有代码和打开的文件资源、数据资源、独立的内存空间。最小的资源管理单元
+线程：从属于某进程，是程序的实际执行者，一个进程包含一个主线程，也可以有更多的子线程，线程拥有自己的栈空间。最小的执行单元。线程之间使用消息队列协作。
+协程：比线程更轻量级，一个线程可以拥有多个协程。协程完全有程序所控制，其实就是一个特殊额函数，这个函数可以在某个地方挂起，并且可以重新在挂起处继续进行。一个线程的多个协程的运行时串行的。协程切换时也存在上下文切换问题。
 
 # 操作系统
 
